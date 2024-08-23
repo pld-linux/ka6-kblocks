@@ -1,18 +1,18 @@
 #
 # Conditional build:
 %bcond_with	tests		# build with tests
-%define		kdeappsver	24.05.2
+%define		kdeappsver	24.08.0
 %define		kframever	5.94.0
 %define		qtver		5.15.2
 %define		kaname		kblocks
 Summary:	Kblocks
 Name:		ka6-%{kaname}
-Version:	24.05.2
+Version:	24.08.0
 Release:	1
 License:	GPL v2+/LGPL v2.1+
 Group:		X11/Applications/Games
 Source0:	https://download.kde.org/stable/release-service/%{kdeappsver}/src/%{kaname}-%{version}.tar.xz
-# Source0-md5:	2d87295dd029bd184268ed154a18a3da
+# Source0-md5:	91d16edff0a5479435ce2499d853c547
 URL:		http://www.kde.org/
 BuildRequires:	Qt6Core-devel >= %{qtver}
 BuildRequires:	Qt6Gui-devel >= 5.11.1
@@ -51,10 +51,10 @@ play area. When there is not enough space for blocks to fall, the game
 is over.
 
 %description -l pl.UTF-8
-KBlocks jest klasyczną grą w spadające bloki. Ideą gry jest
-układać spadające bloki tak, aby tworzyły poziome linie bez przerw.
-Kompletne linie są usuwane i robi się więcej miejsca w obszarze gry.
-Gdy nie ma już miejsca na spadające bloki, gra się kończy.
+KBlocks jest klasyczną grą w spadające bloki. Ideą gry jest układać
+spadające bloki tak, aby tworzyły poziome linie bez przerw. Kompletne
+linie są usuwane i robi się więcej miejsca w obszarze gry. Gdy nie ma
+już miejsca na spadające bloki, gra się kończy.
 
 %prep
 %setup -q -n %{kaname}-%{version}
@@ -97,3 +97,4 @@ rm -rf $RPM_BUILD_ROOT
 %{_datadir}/metainfo/org.kde.kblocks.appdata.xml
 %{_datadir}/qlogging-categories6/kblocks.categories
 %{_datadir}/knsrcfiles/kblocks.knsrc
+%{_datadir}/qlogging-categories6/kblocks.renamecategories
